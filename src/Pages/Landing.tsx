@@ -28,21 +28,6 @@ function Landing() {
           </div>
         </Link>
       </div>
-
-      <section className="flex-100 j-center section-now">
-        <h2 className="text-hero flex-col now-title">
-          Take a look at the
-          <span>
-            sky <span>right now</span>
-          </span>
-        </h2>
-
-        <section>
-          <div className="big-card">
-            <p>hola</p>
-          </div>
-        </section>
-      </section>
     </div>
   );
 }

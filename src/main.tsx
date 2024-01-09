@@ -2,22 +2,17 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { Calculate, Landing, Result } from "./Pages";
 import "./styles/CSS/reset.css";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { AstroDataProvider } from "./Context/astroContext"; // Import the context provider
-
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Landing />,
-  },
-  { path: "/calculate", element: <Calculate /> },
-  { path: "/result", element: <Result /> },
-]);
 
 const App = () => (
   <React.StrictMode>
     <AstroDataProvider>
-      <RouterProvider router={router} />
+      <Routes>
+        <Route path="/" element={<Landing />} />
+        <Route path="/calculate" element={<Calculate />} />
+        <Route path="/result" element={<Result />} />
+      </Routes>
     </AstroDataProvider>
   </React.StrictMode>
 );

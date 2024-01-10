@@ -14,14 +14,10 @@ const router = createBrowserRouter([
   { path: "/result", element: <Result /> },
 ]);
 
-const App = () => (
+ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <AstroDataProvider>
       <RouterProvider router={router} />
     </AstroDataProvider>
   </React.StrictMode>
 );
-
-ReactDOM.createRoot(document.getElementById("root")!).render(<App />);
-
-export default App;
